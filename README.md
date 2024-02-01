@@ -2,6 +2,8 @@
 
 - 夸克网盘「数模资料」链接：https://pan.quark.cn/s/8b79cfdf3b86
 
+- 账号：
+  - chatgpt：noahpvm@outlook.com----bnffJd5LnwbnffJd5Lnw
 
 <DT><H3 ADD_DATE="1706497990" LAST_MODIFIED="1706796678">美赛</H3>
         <DL><p>
