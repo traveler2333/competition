@@ -1,9 +1,12 @@
 ## 2024美赛
 
 - 夸克网盘「数模资料」链接：https://pan.quark.cn/s/8b79cfdf3b86
-
+- Matlab/Python代码（数模41+30种算法常用代码  可运行免调试）
+- 链接：https://pan.baidu.com/s/1cJs4gh6o9CW4_IEJElci6w?pwd=rdcs
+- 数模资料：https://pan.baidu.com/s/1HVN-n7Ve2UQXjoEmvysq1A?pwd=1234#list/path=%2F
+  
 - 账号：
-  - chatgpt：noahpvm@outlook.com----bnffJd5LnwbnffJd5Lnw
+  - chatgpt：noahpvm@outlook.com    -bnffJd5LnwbnffJd5Lnw
 
 <DT><H3 ADD_DATE="1706497990" LAST_MODIFIED="1706796678">美赛</H3>
         <DL><p>
