@@ -4,7 +4,7 @@
 - Matlab/Python代码：https://pan.baidu.com/s/1cJs4gh6o9CW4_IEJElci6w?pwd=rdcs
 - 数模往年资料：https://pan.baidu.com/s/1HVN-n7Ve2UQXjoEmvysq1A?pwd=1234#list/path=%2F
 - 2024数模翻译+思路：https://pan.baidu.com/s/1IQmOwGr6yKOG2H4erPL3zA?pwd=ta53 
-- 账号：
+- 账号：222
   - chatgpt：noahpvm@outlook.com    -bnffJd5LnwbnffJd5Lnw
 
 <DT><H3 ADD_DATE="1706497990" LAST_MODIFIED="1706796678">美赛</H3>
