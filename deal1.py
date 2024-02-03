@@ -12,6 +12,7 @@ def calculate_metrics_complete(df):
   
 
     df['p1_win']=0 # 球员1胜 match
+    df['p2_win']=0 # 球员2胜 match
     df['p1_next_sever']=0 # 球员1发球 match
 
     df['p1_lead']= 0 # 球员1的领先局数 game
@@ -21,13 +22,14 @@ def calculate_metrics_complete(df):
     df['p2_consecutive_wins'] = 0 # 球员2的连胜场数 game
 
     df['dis_gap'] = 0 #局内已跑动距离差 game
-    df['next_win'] = 0 #下一局谁赢 game
+    df['next_1win'] = 0 #下一局谁赢 game
 
     df['useless'] = 0 #无用行 match
 
     for _,group in df.groupby(['match_id']):
         indices = group.index
         for i in indices:
+            
             row = df.loc[i]
             #更新发球方
             if df.at[i,"server"]==1:
@@ -36,7 +38,10 @@ def calculate_metrics_complete(df):
                 df.at[i,"p1_sever"] = 0
 
             if i != indices[-1]:
-                df.at[i,"next_win"] = 1 if df.at[i+1,"p1_win"]==1 else 2
+                if df.at[i+1,"point_victor"]==1 :
+                    df.at[i,"next_1win"] = 1
+                else:
+                    df.at[i,"next_1win"] = 0
                 df.at[i,"p1_next_sever"] = 1 if df.at[i+1,"server"]==1 else 0
                 df.at[i,"useless"] = 0
             else :
@@ -46,8 +51,9 @@ def calculate_metrics_complete(df):
             df.at[i, 'p1_win_rate'] = df.at[i, 'p1_points_won']/(df.at[i, 'p1_points_won']+df.at[i, 'p2_points_won']) 
             df.at[i, 'p2_win_rate'] = df.at[i, 'p2_points_won']/(df.at[i, 'p1_points_won']+df.at[i, 'p2_points_won'])
             df.at[i, 'p1_win'] = 1 if df.at[i, 'point_victor']==1 else 0
+            df.at[i, 'p2_win'] = 1 if df.at[i, 'point_victor']==2 else 0
 
-            #更新重要局
+            #更新赛点局
             if((df.at[i, 'p1_score'] == "AD") or df.at[i, 'p2_score'] == "AD"):
                 df.at[i, 'is_important'] = 1
             else:
@@ -99,7 +105,7 @@ def calculate_metrics_complete(df):
     return df
 
 # 读取数据集
-file_path = 'Wimbledon_featured_matches.csv'
+file_path = 'Wimbledon_featured_matches_processed.csv'
 wimbledon_matches = pd.read_csv(file_path,encoding='latin1')
 
 wimbledon_matches_complete = calculate_metrics_complete(wimbledon_matches.copy())
