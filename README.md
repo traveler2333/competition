@@ -4,7 +4,8 @@
 - Matlab/Python代码：https://pan.baidu.com/s/1cJs4gh6o9CW4_IEJElci6w?pwd=rdcs
 - 数模往年资料：https://pan.baidu.com/s/1HVN-n7Ve2UQXjoEmvysq1A?pwd=1234#list/path=%2F
 - 2024数模翻译+思路：https://pan.baidu.com/s/1IQmOwGr6yKOG2H4erPL3zA?pwd=ta53 
-
+- C题成品论文：
+- https://pan.baidu.com/s/1IQmOwGr6yKOG2H4erPL3zA?pwd=ta53#list/path=%2Fsharelink1101985879651-170281621465648%2F00%202024%E5%B9%B4%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%BE%8E%E8%B5%9B%E6%80%9D%E8%B7%AF%2B%E4%BB%A3%E7%A0%81%2B%E6%88%90%E5%93%81%E8%AE%BA%E6%96%87%E3%80%90%E5%85%AC%E4%BC%97%E5%8F%B7%EF%BC%9A%E6%95%B0%E6%A8%A1%E5%8A%A0%E6%B2%B9%E7%AB%99%E3%80%91&parentPath=%2Fsharelink1101985879651-170281621465648
 
 <DT><H3 ADD_DATE="1706497990" LAST_MODIFIED="1706796678">美赛</H3>
         <DL><p>
