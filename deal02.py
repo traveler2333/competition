@@ -1,5 +1,15 @@
 # 重新定义函数，以确保可以处理整个数据集并且直接修改原DataFrame
 import pandas as pd
+#计算2的动量
+
+
+
+
+
+
+
+
+
 
 def calculate_metrics_complete(df):
     # 对DataFrame进行排序以确保连续性
