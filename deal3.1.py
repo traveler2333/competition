@@ -7,6 +7,7 @@ import pandas as pd
 
 
 def add_row_numbers(df):
+    df['M_dif']=0
     df['ace']=0
     df['winner']=0
     df['double_fault']= 0
@@ -18,6 +19,7 @@ def add_row_numbers(df):
         indices = group.index
         for i in indices:
          #遍历数据集
+            df.at[i,'M_dif'] = df.at[i,'p1_Momentum']-df.at[i,'p2_Momentum']
             if i>indices[0]:
                 df.at[i,'ace'] = df.at[i-1,'p1_ace']+df.at[i-1,'p2_ace']
                 df.at[i,'winner'] = df.at[i-1,'p1_winner']+df.at[i-1,'p2_winner']
@@ -30,7 +32,8 @@ def add_row_numbers(df):
                 df.at[i,'double_fault'] = 0
                 df.at[i,'unf_err'] = 0
                 df.at[i,'break_pt_won'] = 0
-        return df
+        
+    return df
 
 # 读取数据集
 file_path = 'Wimbledon_featured_matches_processed.csv'
