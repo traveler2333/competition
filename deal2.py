@@ -8,6 +8,8 @@ def calculate_metrics_complete(df):
     # 对DataFrame进行排序以确保连续性
     df.sort_values(by=['match_id', 'set_no', 'game_no', 'point_no'], inplace=True)
     df['ad_change'] = 0 # 初始化ad_change列
+    df['ad_change1'] = 0 
+    df['ad_change2'] = 0
 
     # 遍历数据，比较p1_Momentum和p2_Momentum的大小，使得当相对大小改变时，ad_change为1
     match_ids = df['match_id'].unique()
@@ -22,6 +24,17 @@ def calculate_metrics_complete(df):
                 elif (match_df.at[i, 'p1_Momentum'] < match_df.at[i, 'p2_Momentum'] and 
                       match_df.at[i - 1, 'p1_Momentum'] >= match_df.at[i - 1, 'p2_Momentum']):
                     df.at[match_df.index[i], 'ad_change'] = 1
+            if i > 1 and i < len(match_df):
+                if ((match_df.at[i, 'p1_Momentum'] - match_df.at[i - 1, 'p1_Momentum']) * (match_df.at[i - 1, 'p1_Momentum'] - match_df.at[i - 2, 'p1_Momentum'])) > 0:
+                    df.at[match_df.index[i], 'ad_change1'] = 0
+                else:
+                    df.at[match_df.index[i], 'ad_change1'] = 1
+            if i > 1 and i < len(match_df):
+                if ((match_df.at[i, 'p2_Momentum'] - match_df.at[i - 1, 'p2_Momentum']) * (match_df.at[i - 1, 'p2_Momentum'] - match_df.at[i - 2, 'p2_Momentum'])) > 0:
+                    df.at[match_df.index[i], 'ad_change2'] = 0
+                else:
+                    df.at[match_df.index[i], 'ad_change2'] = 1
+            
 
     return df
 
